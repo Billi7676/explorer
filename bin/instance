@@ -55,7 +55,18 @@ db.connect(dbString, function() {
       }
     }); 
   }
+  
+// https handling 
+  var server = require('https');
+  var fs = require('fs');
+  var certRoot = '/etc/letsencrypt/live/explorer.absolutecoin.net/';
 
+  var options = {
+  cert: fs.readFileSync(certRoot + 'cert.pem'),
+  key: fs.readFileSync(certRoot + 'privkey.pem'),
+  };
+
+  server.createServer(options, app).listen(443);
   var server = app.listen(app.get('port'), function() {
     debug('Express server listening on port ' + server.address().port);
   });

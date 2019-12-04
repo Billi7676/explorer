@@ -5,9 +5,9 @@
 */
 {
   // name your instance!
-  "title": "CIQUIDUS",
+  "title": "Absolute Explorer",
 
-  "address": "127.0.0.1:3001",
+  "address": "https://explorer.absolutecoin.net",
 
   // coin name
   "coin": "Absolute",
@@ -96,11 +96,11 @@
   "markets": {
     "coin": "ABS",
     "exchange": "BTC",
-    "enabled": ["cryptopia"],
+    "enabled": ["graviex"],
     "cryptopia_id": "2186",
     "ccex_key" : "Get-Your-Own-Key",
     "graviex_id": "absbtc",
-    "default": "cryptopia"
+    "default": "graviex"
   },
 
   // richlist/top100 settings
@@ -120,12 +120,12 @@
   },
 
   // twitter, facebook, googleplus, bitcointalk, github, slack, website
-  "twitter": "suprnurd",
+  "twitter": "absolute_crypto",
   "facebook": "yourfacebookpage",
   "bitcointalk": "yourbitcointalktopicvalue",
   "github": "yourgithubusername/yourgithubrepo",
   "slack": "yourfullslackinviteurl",
-  "website": "yourfullwebsiteurl",
+  "website": "https://www.absolutecoin.net",
 
   //genesis
   "genesis_tx": "fa6ef9872494fa9662cf0fecf8c0135a6932e76d7a8764e1155207f3205c7c88",
