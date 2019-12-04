@@ -26,7 +26,7 @@ block market_view
               td.hidden-xs #{marketdata.data.summary.bid}
               td.hidden-xs #{marketdata.data.summary.ask}
               td.hidden-xs #{marketdata.data.summary.last}
-              - var graviex_change =  (marketdata.data.summary.change).toFixed(4);
+              - var graviex_change =  parseFloat(marketdata.data.summary.change).toFixed(4);
               if graviex_change >= 0
                 td.success +#{graviex_change} %
               else
