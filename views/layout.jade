@@ -27,8 +27,8 @@ html
         function update_stats(){
           $.ajax({url: '/ext/summary', success: function(json){
             $("#supply").text(json.data[0].supply);
-            $("#masternodeCount").text(json.data[0].masternodeCount);
             $("#masternodeCountOnline").text(json.data[0].masternodeCountOnline);
+            $("#masternodeCountOffline").text(json.data[0].masternodeCountOffline);
             $("#difficulty").text(json.data[0].difficulty);
             $("#difficultyHybrid").text(json.data[0].difficultyHybrid);
             $("#hashrate").text(json.data[0].hashrate);
@@ -128,13 +128,6 @@ html
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
 
-
-    .col-md-12
-      .row.text-center
-        .col-md-2.col-sm-12.col-md-offset-5
-          img(src='#{settings.logo}', style='margin-top:-15px;height:128px;')
-
-
     .col-md-12
       .row.text-center
         .col-md-2.col-md-offset-1
@@ -175,8 +168,12 @@ html
             .panel-heading
               strong #{settings.locale.masternodecount}
             .panel-body
-              label#masternodeCount
-              label#masternodeCountOnline -
+              #masternodepanel
+                span.glyphicon.fa.fa-exclamation-triangle
+                label#masternodeCountOffline -
+                label &nbsp;&#x2F;&nbsp;        
+                label#masternodeCountOnline -
+                span.glyphicon.fa.fa-check-circle
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
