@@ -10,7 +10,7 @@ body {
 
 .nav-search input {
 	width: 400px !important;
-	margin-right: 5px;	
+	margin-right: 5px;
 }
 
 .view_tx {
@@ -96,9 +96,14 @@ tr {
 	margin-left:5px;
 }
 
-#twitter-icon {
+#twitter-icon,
+#facebook-icon,
+#bitcointalk-icon,
+#github-icon,
+#slack-icon {
 	font-size: 20px;
 }
+
 .connections {
 	position: absolute;
 	bottom: 15px;
@@ -109,7 +114,11 @@ tr {
 	margin-right: 10px;
 }
 
-#twitter-icon img{
+#twitter-icon img,
+#facebook-icon img,
+#bitcointalk-icon img,
+#github-icon img,
+#slack-icon img{
 	width: 40px;
 	margin: 5px 5px;
 }
@@ -163,4 +172,3 @@ tr {
 	position: absolute;
 	bottom: 0px;
 }
-
