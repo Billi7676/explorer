@@ -17,8 +17,9 @@ var app = express();
 // absolutecoinapi
 absolutecoinapi.setWalletDetails(settings.wallet);
 if (settings.heavy != true) {
-  absolutecoinapi.setAccess('only', ['getinfo', 'getnetworkhashps', 'getmininginfo','getdifficulty', 'getconnectioncount',
-  'getmasternodecount', 'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction', 'getpeerinfo', 'gettxoutsetinfo']);
+  chaincoinapi.setAccess('only', ['getinfo', 'getnetworkhashps', 'getmininginfo','getdifficulty', 'getconnectioncount',
+  'getmasternodecount', 'getmasternodecountonline', 'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction',
+  'getpeerinfo', 'gettxoutsetinfo']);
 } else {
   // enable additional heavy api calls
   /*
@@ -32,9 +33,9 @@ if (settings.heavy != true) {
     getsupply - Returns the current money supply.
     getmaxmoney - Returns the maximum possible money supply.
   */
-  absolutecoinapi.setAccess('only', ['getinfo', 'getstakinginfo', 'getnetworkhashps', 'getdifficulty', 'getconnectioncount',
-    'getmasternodecount', 'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction','getmaxmoney', 'getvote',
-    'getmaxvote', 'getphase', 'getreward', 'getnextrewardestimate', 'getnextrewardwhenstr',
+  chaincoinapi.setAccess('only', ['getinfo', 'getstakinginfo', 'getnetworkhashps', 'getdifficulty', 'getconnectioncount',
+    'getmasternodecount', 'getmasternodecountonline', 'getblockcount', 'getblockhash', 'getblock', 'getrawtransaction',
+    'getmaxmoney', 'getvote', 'getmaxvote', 'getphase', 'getreward', 'getnextrewardestimate', 'getnextrewardwhenstr',
     'getnextrewardwhensec', 'getsupply', 'gettxoutsetinfo']);
 }
 // view engine setup
