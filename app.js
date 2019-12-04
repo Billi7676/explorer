@@ -1,6 +1,6 @@
 var express = require('express')
   , path = require('path')
-  , absolutecoinapi = require('chaincoin-node-api')
+  , absolutecoinapi = require('absolute-node-api')
   , favicon = require('static-favicon')
   , logger = require('morgan')
   , cookieParser = require('cookie-parser')
