@@ -34,6 +34,7 @@ html
             $("#lblConnections").text(json.data[0].connections + ' connections');
             $("#lblBlockcount").text(json.data[0].blockcount + ' blocks');
             $("#lblX1").text(' ');
+            //$("#masterNodesCount").text(json.data[0].masternodesCount);
           }});
         }
         $('.block-last-next').tooltip({
@@ -125,6 +126,14 @@ html
                 a.navbar-link(href='/info')
                   span.glyphicon.glyphicon-info-sign
                   span.menu-text #{settings.locale.menu_api}
+
+
+    .col-md-12
+      .row.text-center
+        .col-md-2.col-sm-12.col-md-offset-5
+          img(src='#{settings.logo}', style='margin-top:-15px;height:128px;')
+
+
     .col-md-12
       .row.text-center
         .col-md-2.col-md-offset-1
@@ -160,8 +169,6 @@ html
                label#difficultyHybrid -
               else
                label#difficulty -
-        .col-md-2.col-sm-12
-          img(src='#{settings.logo}', style='margin-top:-15px;height:128px;')
         .col-md-2
           .panel.panel-default.hidden-sm.hidden-xs
             .panel-heading
@@ -184,6 +191,15 @@ html
                label#lblX1
               else
                label#lastPrice -
+
+
+        .col-md-2
+         .panel.panel-default.hidden-sm.hidden-xs
+            .panel-heading
+              strong #{settings.locale.masternodes_text_count}
+            .panel-body
+              label#masterNodesCount ?
+
 
       .row.text-center(style='margin-top:10px;margin-bottom:20px;')
         form.form-inline(method='post', action='/search')
@@ -222,7 +238,7 @@ html
         ul.nav
           li.text-center(style='margin-left:80px;margin-right:80px;')
             p(style='margin-top:15px;')
-              a.navbar-link(href='https://github.com/absolute-community/explorer', target='_blank') Ciquidus Explorer 
+              a.navbar-link(href='https://github.com/absolute-community/explorer', target='_blank') Absolute Explorer
       span.connections
         label#lblBlockcount.label.label-default -
         label#lblConnections.label.label-default -
