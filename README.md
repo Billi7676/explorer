@@ -1,20 +1,14 @@
-Iquidus Explorer - 1.6.1
+Aiquidus - 1.7.2
 ================
 
-An open source block explorer written in node.js.
+The Absolute Base Block Explorer.
+
+This project is a fork of [Iquidus Explorer](https://github.com/iquidus/explorer).
 
 ### See it in action
 
-*  [Deutsche eMark](http://b.emark.tk/)
-*  [Sphere](http://sphere.iquidus.io)
-*  [Vertcoin](http://explorer.vertcoin.info/)
-*  [Vivo](http://vivo.explorerz.top:3003)
-*  [Florincoin](https://florincoin.info/info)
-*  [Maxcoin Explorer 1](https://explorer.maxcoinproject.net/)
-*  [Maxcoin Explorer 2](https://explorer2.maxcoinproject.net/)
+*  [explorer.absolutecoin.net](https://explorer.absolutecoin.net)
 
-
-*note: If you would like your instance mentioned here contact me*
 
 ### Requires
 
@@ -34,7 +28,7 @@ Create databse:
 
 Create user with read/write access:
 
-    > db.createUser( { user: "iquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
+    > db.createUser( { user: "ciquidus", pwd: "3xp!0reR", roles: [ "readWrite" ] } )
 
 *note: If you're using mongo shell 2.4.x, use the following to create your user:
 
@@ -42,7 +36,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/absolute-community/explorer explorer
 
 ### Install node modules
 
@@ -100,15 +94,13 @@ sync.js (located in scripts/) is used for updating the local databases. This scr
     */2 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/sync.js market > /dev/null 2>&1
     */5 * * * * cd /path/to/explorer && /usr/bin/nodejs scripts/peers.js > /dev/null 2>&1
 
+forcesync.sh and forcesynclatest.sh (located in scripts/) can be used to force the explorer to sync at the specified block heights
+
 ### Wallet
 
-Iquidus Explorer is intended to be generic so it can be used with any wallet following the usual standards. The wallet must be running with atleast the following flags
+The wallet connected to Ciquidus must be running with atleast the following flags:
 
     -daemon -txindex
-    
-### Security
-
-Ensure mongodb is not exposed to the outside world via your mongo config or a firewall to prevent outside tampering of the indexed chain data. 
 
 ### Known Issues
 
@@ -138,6 +130,7 @@ Where [SIZE] is an integer higher than the default.
 
 ### License
 
+Copyright (c) 2019, Absolutecoin
 Copyright (c) 2015, Iquidus Technology  
 Copyright (c) 2015, Luke Williams  
 All rights reserved.
