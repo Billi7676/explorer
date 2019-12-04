@@ -1,4 +1,4 @@
-Aiquidus - 1.7.2
+Absolute Iquidus - 1.7.2
 ================
 
 The Absolute Base Block Explorer.
